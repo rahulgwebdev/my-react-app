@@ -31,11 +31,12 @@ artifacts:
   discard-paths: no
   base-directory: build
 
-stages:
-  TEST:
-    LINT:
-      commands:
-        - npm run lint
-    TEST:
-      commands:
-        - npm test -- --watchAll=false
+#  not working
+# stages:
+#   TEST:
+#     LINT:
+#       commands:
+#         - npm run lint
+#     TEST:
+#       commands:
+#         - npm test -- --watchAll=false
