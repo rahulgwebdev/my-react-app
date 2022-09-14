@@ -10,13 +10,13 @@ phases:
   pre_build:
     commands:
       - npm install
-  TEST:
-    LINT:
-      commands:
-        - npm run lint
-    TEST:
-      commands:
-        - npm test -- --watchAll=false
+  # TEST:
+  #   LINT:
+  #     commands:
+  #       - npm run lint
+  #   TEST:
+  #     commands:
+  #       - npm test -- --watchAll=false
   # Now we want to actually build our React app
   build:
    commands:
