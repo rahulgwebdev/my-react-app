@@ -1,0 +1,138 @@
+.navbar {
+  background-color: black;
+  color: whitesmoke;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  z-index: 30;
+  display: block;
+}
+
+.navbarLogo {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .navbarItem {
+} */
+
+.navbarItem,
+.navbarLink {
+  display: block;
+  line-height: 1.5;
+  padding: 0.5rem 0.75rem;
+  position: relative;
+}
+
+.navbarItem:last-of-type,
+.navbarLink:last-of-type {
+  padding: 0.5rem 0.75rem 1rem 0.75rem;
+}
+
+.navbarBurger {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: 0 0;
+  border: none;
+  color: currentColor;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+  height: 42px;
+  width: 42px;
+  position: relative;
+}
+
+.navbarBurger span {
+  background-color: currentColor;
+  display: block;
+  height: 1px;
+  left: calc(50% - 8px);
+  position: absolute;
+  transform-origin: center;
+  transition-duration: 86ms;
+  transition-property: background-color, opacity, transform;
+  transition-timing-function: ease-out;
+  width: 16px;
+}
+
+.navbarBurger span:first-child {
+  top: calc(50% - 6px);
+}
+
+.navbarBurger.isActive span:first-child {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.navbarBurger span:nth-child(2) {
+  top: calc(50% - 1px);
+}
+
+.navbarBurger.isActive span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbarBurger span:nth-child(3) {
+  top: calc(50% + 4px);
+}
+
+.navbarBurger.isActive span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+/* For bigger screen */
+@media only screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    min-height: 3.25rem;
+  }
+
+  .navbarBurger {
+    display: none;
+  }
+
+  .navbarMenu {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  .navbarItem,
+  .navbarLink {
+    align-items: center;
+    display: flex;
+  }
+
+  .navbarItem {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .navbarItem:last-of-type,
+  .navbarLink:last-of-type {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .navbarStart,
+  .navbarEnd,
+  .navbarCenter {
+    display: flex;
+  }
+
+  .navbarStart {
+    justify-content: flex-start;
+    margin-right: auto;
+  }
+
+  .navbarEnd {
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .navbarCenter {
+    justify-content: center;
+  }
+}
